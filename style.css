@@ -33,14 +33,6 @@ img{
     padding: 0 1rem;
     display: flex;
 }
-.wrapper .logo .favourate p{
-    background-color: var(--dark-color);
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: flex;
-    
-}
 .search-container{
     background-color: var(--md-dark-color);
     height: 180px;
@@ -241,11 +233,6 @@ img{
 .movie-info .awards i{
     color: var(--yellow-color);
     margin: 1rem 0.7rem 0 0;
-}
-.favourate{
-    background-color: grey;
-    color: red;
-    margin-top: 1%;
 }
 
 @media(max-width: 450px){

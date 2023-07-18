@@ -1,12 +1,12 @@
-// Titles: https://www.omdbapi.com/?s=thor&page=1&apikey=bfd6b563
-// details: http://www.omdbapi.com/?i=tt3896198&apikey=bfd6b563
+// Titles: https://www.omdbapi.com/?s=thor&page=1&apikey=b0edff8a
+// details: http://www.omdbapi.com/?i=tt3896198&apikey=b0edff8a
 const movieSearchBox = document.getElementById('movie-search-box');
 const searchList = document.getElementById('search-list');
 const resultGrid = document.getElementById('result-grid');
 
 // load movies from API
 async function loadMovies(searchTerm){
-    const URL = `https://www.omdbapi.com/?s=${searchTerm}&page=1&apikey=bfd6b563`;
+    const URL = `https://www.omdbapi.com/?s=${searchTerm}&page=1&apikey=b0edff8a`;
     const res = await fetch(`${URL}`);
     const data = await res.json();
     // console.log(data.Search);
@@ -55,7 +55,7 @@ function loadMovieDetails(){
             // console.log(movie.dataset.id);
             searchList.classList.add('hide-search-list');
             movieSearchBox.value = "";
-            const result = await fetch(`https://www.omdbapi.com/?i=${movie.dataset.id}&apikey=bfd6b563`);
+            const result = await fetch(`https://www.omdbapi.com/?i=${movie.dataset.id}&apikey=b0edff8a`);
             const movieDetails = await result.json();
             // console.log(movieDetails);
             displayMovieDetails(movieDetails);
@@ -81,9 +81,6 @@ function displayMovieDetails(details){
         <p class = "plot"><b>Plot:</b> ${details.Plot}</p>
         <p class = "language"><b>Language:</b> ${details.Language}</p>
         <p class = "awards"><b><i class = "fas fa-award"></i></b> ${details.Awards}</p>
-        <div>
-            <button class="favourate"> My Favourates </button>
-        </div>
     </div>
     `;
 }
